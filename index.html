@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>頼りになるOracle DBAになるためのはじめの一歩</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h2>頼りになるOracle DBAになるための はじめの一歩</h2>
+        <h3></h3>
+        <h3></h3>
+        <p>JAWS-UG中央線 第2回勉強会</p>
+        <p>2014.05.30 Fri.</p>
+      </section>
+      <section class="gif gif--profile">
+        <h2>藤本 竜之介</h2>
+        <h3>Ryunosuke FUJIMOTO</h3>
+        <h3><a href="https://twitter.com/r_fujimoto">@r_fujimoto</a></h3>
+      </section>
+      <section>
+        <h3>2014- Oracle DBA に任命される</h3>
+        <h3>2013- Infrastructure as Code に目覚める</h3>
+        <h3>2011- Googleライクな特許検索サービスを開発</h3>
+      </section>
+      <section>
+        <h1>DBA</h1>
+      </section>
+      <section>
+        <h2 class="bullet">DBAがやりたいこと</h2>
+        <h3>Oracleの動作検証</h3>
+        <h3>Schemaの変更管理</h3>
+        <h3>DBのバックアップ/リストア</h3>
+        <h3>SQLの性能チューニング</h3>
+      </section>
+      <section>
+        <h1>とにかくoracle使える環境がほしい</h1>
+      </section>
+      <section>
+        <h1>30分以内で!!!</h1>
+      </section>
+      <section>
+        <h1>Oracle on AWS</h1>
+      </section>
+      <section class="gif gif--fight">
+        <h1>EC2 vs RDS</h1>
+      </section>
+      <section><a href="http://www.slideshare.net/InsightTechnology/a31-oracle-yoshida"><img src="http://image.slidesharecdn.com/a31oracleyoshida-131122001746-phpapp02/95/slide-1-638.jpg" width="100%" alt="AWS上でOracleを利用するためのはじめの一歩"></a></section>
+      <section>
+        <h2>EC2</h2>
+        <ul>
+          <li>Oracleのインストールが必要</li>
+          <li>sshして、sqlplus できる</li>
+          <li>sshして、expdp/impdp できる</li>
+          <li><a href="https://aws.amazon.com/jp/ec2/pricing">無料利用枠</a>あり</li>
+          <li>Tokyo Region, m3.medium: $0.161/h</li>
+        </ul>
+      </section>
+      <section>
+        <h2>RDS</h2>
+        <ul>
+          <li>Oracleのインストールが不要（パラメータを選択するだけ）</li>
+          <li>ssh (して、sqlplus) できない</li>
+          <li>ssh (して、expdp/impdp) できない</li>
+          <li>無料利用枠なし</li>
+          <li>Tokyo Region, db.m3.medium: $0.245/h</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="bullet">setup oracle on EC2</h2>
+        <ul>
+          <li>oracle-xe 11gをインストール</li>
+          <li>ti.microを使う場合の注意点</li>
+        </ul>
+      </section>
+      <section><a href="http://tachesimazzoca.blogspot.jp/2013/01/3000001.html"><img src="images/oracle-xe_setup.png" width="70%"></a><small>http://tachesimazzoca.blogspot.jp/2013/01/3000001.html</small></section>
+      <section data-bespoke-state="green" class="light">
+        <h1>私も Oracle  使いたい</h1>
+      </section>
+      <section>
+        <h1>URL教えるから　自分でやってみ</h1>
+      </section>
+      <section data-bespoke-state="green" class="light">
+        <h1>o(´^｀)o ｳｰ</h1>
+      </section>
+      <section>
+        <h1><strong>30分</strong>で　oracleを料理してみる</h1>
+      </section>
+      <section>
+        <h2>oracleを料理するには？</h2><img src="images/chef_spec_process.png" width="100%">
+      </section>
+      <section>
+        <h2>Infrastructure as Code</h2><img src="images/chef_spec_process_code.png" width="100%">
+      </section>
+      <section>
+        <h2>Git</h2><a href="http://bitbucket.org"><img alt="bitbucket" src="images/bitbucket" width="100%"></a>
+      </section>
+      <section>
+        <h2>CI</h2><a href="http://wercker.com/"><img alt="wercker" src="images/wercker.back.png" width="100%"></a>
+      </section>
+      <section>
+        <h2>Communication</h2><a href="https://www.atlassian.com/ja/software/hipchat/"><img alt="hipchat" src="images/hipchat" width="100%"></a>
+      </section>
+      <section>
+        <h2>hipchat</h2><img alt="hipchat_sample.png" src="images/hipchat_sample.png" width="100%">
+      </section>
+      <section><img src="images/ci_process_42.jpg" width="100%"></section>
+      <section data-bespoke-state="green" class="light">
+        <h1>私も Oracle  使いたい</h1>
+      </section>
+      <section>
+        <h2>これやってみ</h2>
+        <pre class="language-bash"><code>$ git clone git@bitbucket.org:gits_fujimoto/oracle-chef-spec.git
+$ cd oracle-chef-spec
+$ sh cook-oracle
+</code></pre>
+      </section>
+      <section data-bespoke-state="green" class="light">
+        <h1>ﾄﾞﾓ~♪ヽ(^-^ ) (v^ｰﾟ)ﾔｯﾀﾈ!!</h1>
+      </section>
+      <section>
+        <h2 class="bullet">だれもがAWS上で</h2>
+        <h2 class="bullet">Oracleを使える環境は</h2>
+        <h2 class="bullet">できあがった</h2>
+      </section>
+      <section>
+        <h1>To be Oracle DBA</h1>
+      </section>
+      <section>
+        <h2>Next Step is</h2>
+        <h3>Schemaの変更管理/Migrationか</h3>
+      </section>
+      <section>
+        <h1>Thank you!</h1><img src="images/profile.jpg" class="avatar">
+        <h3><a href="https://twitter.com/r_fujimoto">@r_fujimoto</a></h3>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
