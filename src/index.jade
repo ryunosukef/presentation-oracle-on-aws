@@ -17,16 +17,11 @@ html
     article
 
       section
-        h2 頼りになるOracle DBAになるためのはじめの一歩
+        h2 頼りになるOracle DBAになるための はじめの一歩
         h3
-        h3 2014.05.30 Fri.
-        h3 JAWS-UG中央線第2回勉強会
-
-      section.light(data-bespoke-state='green')
-        h2 藤本 竜之介
-        h3 Ryunosuke FUJIMOTO
-        img.avatar(src="images/profile.jpg")
-        a(href='https://twitter.com/r_fujimoto') @r_fujimoto
+        h3
+        p JAWS-UG中央線 第2回勉強会
+        p 2014.05.30 Fri.
 
       section.gif.gif--profile
         h2 藤本 竜之介
@@ -34,335 +29,139 @@ html
         h3
           a(href='https://twitter.com/r_fujimoto') @r_fujimoto
 
-      section.logo.logo-profile
-        h2 藤本 竜之介
-        h3 Ryunosuke FUJIMOTO
-        h3
-          a(href='https://twitter.com/r_fujimoto') @r_fujimoto
+      section
+        h3 2014- Oracle DBA に任命される
+        h3 2013- Infrastructure as Code に目覚める
+        h3 2011- Googleライクな特許検索サービスを開発
+
+      section
+        h1 DBA
+
+      section
+        h2.bullet DBAがやりたいこと
+        h3 Oracleの動作検証
+        h3 Schemaの変更管理
+        h3 DBのバックアップ/リストア
+        h3 SQLの性能チューニング
+
+      section
+        h1 とにかくoracle使える環境がほしい
+
+      section
+        h1 30分以内で!!!
+
+      section
+        h1 Oracle on AWS
+
+      section.gif.gif--fight
+        h1 EC2 vs RDS
+
+      section
+        a(href='http://www.slideshare.net/InsightTechnology/a31-oracle-yoshida')
+          img(src='http://image.slidesharecdn.com/a31oracleyoshida-131122001746-phpapp02/95/slide-1-638.jpg' width='100%' alt='AWS上でOracleを利用するためのはじめの一歩')
+
+      section
+        h2 EC2
+        ul
+          li Oracleのインストールが必要
+          li sshして、sqlplus できる
+          li sshして、expdp/impdp できる
+          li <a href="https://aws.amazon.com/jp/ec2/pricing">無料利用枠</a>あり
+          li Tokyo Region, m3.medium: $0.161/h
+
+      section
+        h2 RDS
+        ul
+          li Oracleのインストールが不要（パラメータを選択するだけ）
+          li ssh (して、sqlplus) できない
+          li ssh (して、expdp/impdp) できない
+          li 無料利用枠なし
+          li Tokyo Region, db.m3.medium: $0.245/h
+
+      section
+        h2.bullet setup oracle on EC2
+        ul
+          li oracle-xe 11gをインストール
+          li ti.microを使う場合の注意点
+
+      section
+        a(href='http://tachesimazzoca.blogspot.jp/2013/01/3000001.html')
+          img(src='images/oracle-xe_setup.png' width='70%')
+        small http://tachesimazzoca.blogspot.jp/2013/01/3000001.html
 
       section.light(data-bespoke-state='green')
-        h2 今日のおまじない
+        h1 私も Oracle  使いたい
+
+      section
+        h1 URL教えるから　自分でやってみ
+
+      section.light(data-bespoke-state='green')
+        h1 o(´^｀)o ｳｰ
+
+      section
+        h1 <strong>30分</strong>で　oracleを料理してみる
+
+      section
+        h2 oracleを料理するには？
+        img(src='images/chef_spec_process.png' width='100%')
+
+      section
+        h2 Infrastructure as Code
+        img(src='images/chef_spec_process_code.png' width='100%')
+
+      section
+        h2 Git
+        a(href="http://bitbucket.org")
+          img(alt="bitbucket" src="images/bitbucket" width="100%")
+
+      section
+        h2 CI
+        a(href="http://wercker.com/")
+          img(alt="wercker" src="images/wercker" width="100%")
+
+      section
+        h2 Communication
+        a(href="https://www.atlassian.com/ja/software/hipchat/")
+          img(alt="hipchat" src="images/hipchat" width="100%")
+
+      section
+        h2 hipchat
+        img(alt="hipchat_sample.png" src="images/hipchat_sample.png" width="100%")
+
+      section
+        img(src='images/ci_process_42.jpg' width='100%')
+
+      section.light(data-bespoke-state='green')
+        h1 私も Oracle  使いたい
+
+      section
+        h2 これやってみ
         pre.language-bash
           code.
             $ git clone git@bitbucket.org:gits_fujimoto/oracle-chef-spec.git
             $ cd oracle-chef-spec
             $ sh cook-oracle
 
-      section
-        h1 DBA
-
-      section
-        h2 DBAがやりたいこと
-        ul
-          li
-          li oracleの動作検証
-          li schemaの変更管理
-
-      section.gif.gif--fight
-        h2 EC2 vs RDS
-
-      section
-        img.avatar(src='images/cowboy.jpg')
-        br
-        blockquote.
-          I realized that a task-based build tool with <strong>built-in, commonly used tasks</strong> was the approach that would work best for me
-        br
-        p
-          a(href='https://twitter.com/cowboy') Ben Alman
-          br
-          small March 2012
-
-      section
-        h3 Single, global Grunt:
-        pre.language-bash
-          code.
-            $ npm install -g grunt
-
-      section
-        h3 Configuration over code
-        pre.language-javascript
-          code.
-              grunt.initConfig({
-                lint: {
-                  src: 'src/&lt;%= pkg.name %&gt;.js'
-                },
-                concat: {
-                  src: [
-                    '&lt;banner:meta.banner&gt;',
-                    '&lt;file_strip_banner:src/&lt;%= pkg.name %&gt;.js&gt;'
-                  ],
-                  dest: '&lt;%= pkg.name %&gt;.js'
-                }
-              });
-
-      section
-        h3 Built-in init task to get you started
-        pre.language-bash
-          code.
-            $ grunt init jquery
-
-      section
-        h2.bullet Kitchen sink
-        ul
-          li init
-          li concat
-          li lint
-          li min
-          li qunit
-          li server
-          li test
-          li watch
-
       section.light(data-bespoke-state='green')
-        h2.bullet Simple config
-        p.bullet Common build steps
-        p.bullet Designed for small libraries &amp; plugins
-
-      section.gif.gif--omg-grunt
-        h1 OMG GRUNT
-
-      section.gif.gif--omg-plugins
-        h1 OMG GRUNT PLUGINS
-
-      section.gif.gif--cowboy-reaction
-
-      section.light(data-bespoke-state='green')
-        h2.bullet What was wrong?
-        ul
-          li Global 'grunt' command...
-          li Upgrading Grunt could break older projects
-          li Your new project might not build on old Grunt versions
-          li Grunt was really only designed for small projects
+        h1 ﾄﾞﾓ~♪ヽ(^-^ ) (v^ｰﾟ)ﾔｯﾀﾈ!!
 
       section
-        h2.bullet Grunt v0.4
-        h3.bullet Released Feb 2013
-        ul
-          li grunt.js became Gruntfile.js
-          li 'init' task became 'grunt-init', inspired <a href="http://yeoman.io">Yeoman</a>
-          li Local Grunt install for each project
-          li Global 'grunt' command runs local Grunt
-          li Everything is a plugin, no built-in tasks
-
-      section.gif.gif--grunt-happy
-        h1
-          .bullet GRUNT 0.4
-          .bullet +
-          .bullet BOWER
-          .bullet +
-          .bullet YEOMAN
-
-      section.gif.gif--well-done
-
-      section.light.gif.gif--gulp(data-bespoke-state='green')
-        h1 A CHALLENGER APPEARS
-
-      section.logo.logo--gulp(data-bespoke-state='white')
+        h2.bullet だれもがAWS上で
+        h2.bullet Oracleを使える環境は
+        h2.bullet できあがった
 
       section
-        ul
-          li Stream-based build system
-          li Code over configuration
-          li Small, idiomatic Node modules
-          li Really simple, elegant API
+        h1 To be Oracle DBA
 
       section
-        h2.bullet Basic Gulpfile
-        pre.bullet.language-javascript
-          code.
-            var gulp = require('gulp'),
-              stylus = require('gulp-stylus'),
-              autoprefixer = require('gulp-autoprefixer');
-        pre.bullet.language-javascript
-          code.
-            gulp.task('default', function() {
-              return gulp.src('src/styles/*.styl')
-                .pipe(stylus())
-                .pipe(autoprefixer())
-                .pipe(gulp.dest('public/styles'));
-            });
-
-      section
-        h2.bullet Gulp tasks run from terminal
-        pre.bullet.language-bash
-          $ gulp taskname
-
-      section
-        h2.bullet Streaming Builds
-        pre.bullet.language-javascript
-          code.
-            gulp.src('src/foobar.styl') // <-- Read from FS
-
-              // In memory transforms:
-              .pipe(stylus())
-              .pipe(rename({ ext: 'css' }))
-              .pipe(autoprefixer())
-              .pipe(cssmin())
-              .pipe(header('/* Copyright 2014 */'))
-
-              .pipe(gulp.dest('dist')) // <-- Write to FS
-
-      section.light(data-bespoke-state='green')
-        h2.bullet Streams?
-        p.bullet Read the <a href="https://github.com/substack/stream-handbook">Stream Handbook</a>
-        br
-        .bullet
-          img.avatar.avatar--small(src='images/substack.png')
-          br
-          h3
-            | by
-            a(href='https://twitter.com/substack') @substack
-
-      section
-        img.avatar(src='images/maxogden.png')
-        br
-        blockquote.
-          best part about <a href="https://twitter.com/gulpjs">@gulpjs</a> is that people are writing generic, streaming node modules that have nothing to do w/ gulp except the module name :)
-        br
-        p
-          a(href='https://twitter.com/maxogden') @maxogden
-
-      section.gif.gif--gulp-api
-        h1.bullet LET'S LEARN THE GULP API
-        h2.bullet It's not too hard.
-
-      section
-        h2.bullet gulp.task
-        pre.bullet.language-javascript
-          code.
-            gulp.task('name', ['deps'], function(done) {
-
-              return stream || promise;
-              // ...or, call done()
-
-            });
-
-      section
-        h2.bullet gulp.watch
-        pre.bullet.language-javascript
-          code.
-            gulp.watch('src/**/*.js', ['test', 'compile']);
-
-      section
-        h2.bullet gulp.src
-        h3.bullet Returns a readable stream
-        pre.bullet.language-javascript
-          code.
-            gulp.src(['src/**/*.js', 'test/spec/**/*.js'])
-
-      section
-        h2.bullet gulp.dest
-        h3.bullet Returns a "through stream"
-        pre.bullet.language-javascript
-          code.
-            gulp.src('src')
-              .pipe(...)
-              .pipe(gulp.dest('dist'));
-        br
-        p.bullet Yes, that means you can keep piping!
-
-      section.gif.gif--thats-it
-        h2.bullet task, watch, src, dest
-        h1.bullet That's it.
-
-      section.light(data-bespoke-state='green')
-        h2 But...
-        h3 How do you run all the tasks sequentially?
-
-      section.gif.gif--wrong-question
-        h1 WRONG QUESTION
-
-      section.gif.gif--orchestrator
-        h2.bullet Gulp uses <a href="https://github.com/robrich/orchestrator">Orchestrator</a>
-        h3.bullet Just specify task dependencies
-        p.bullet Tasks run with maximum concurrency
-
-      section.light(data-bespoke-state='green')
-        h2 But...
-        h3 What's coming down the pipe?
-
-      section.gif.gif--vinyl
-        h1.bullet
-          a(href='https://github.com/wearefractal/vinyl') vinyl
-        h2.bullet Virtual file objects
-
-      section.gif.gif--anger
-        h1 USING GULP IN ANGER
-
-      section
-        h1.bullet <a href="https://github.com/markdalgleish/bespoke.js">Bespoke.js</a>
-        h3.bullet Now uses Gulp instead of Grunt
-        p.bullet Which caused me to write...
-
-      section
-        h1.bullet <a href="https://github.com/markdalgleish/gulp-coveralls">gulp-coveralls</a>
-        h3.bullet Submits unit test coverage to <a href="http://coveralls.io">coveralls.io</a>
-
-      section.light(data-bespoke-state='green')
-        h2 So...
-        h3 Is Gulp ready to replace Grunt?
-
-      section.gif.gif--no
-
-      section
-        h2.bullet Well, not unless you live on the bleeding edge
-        h3.bullet The ecosystem needs a bit more time to mature
-        p.bullet First things first...
-
-      section.gif.gif--omg-plugins
-        h1.bullet OMG GULP PLUGINS
-        h2.bullet 284 and counting...
-
-      section
-        img.avatar(src='images/sindresorhus.jpg')
-        br
-        blockquote.
-          Gulp is a new, fast &amp; light, streaming build system. While evaluating it for <a href="https://twitter.com/yeoman">@yeoman</a> I created some plugins for it: <a href="https://plus.google.com/+sindresorhus/posts/ebiZPMSxVf9">http://j.mp/1fnwFpv</a>
-        br
-        p
-          a(href='https://twitter.com/sindresorhus') @sindresorhus
-          br
-          small Dec 19, 2013
-
-      section
-        h1 Two weeks later...
-
-      section
-        img.avatar(src='images/sindresorhus.jpg')
-        br
-        blockquote.
-          26 <a href="https://twitter.com/gulpjs">@gulpjs</a> plugins done! <a href="https://github.com/search?l=&amp;o=desc&amp;p=1&amp;q=gulp+user%3Asindresorhus&amp;ref=advsearch&amp;s=updated&amp;type=Repositories">https://github.com/search?l=&amp;o=de…</a><br>for: <a href="https://twitter.com/search?q=%23reactjs&amp;src=hash">#reactjs</a>, mocha, webp, myth, traceur, recess, esformatter, jscs, ftp, tar, zip, &amp; more
-        br
-        p
-          a(href='https://twitter.com/sindresorhus') @sindresorhus
-          br
-          small Jan 2, 2014
-
-      section.light(data-bespoke-state='green')
-        h2 So...
-        h3 What's happening with Yeoman?
-
-      section
-        h3.bullet There's already an official generator for Gulp
-        h1.bullet <a href="https://github.com/yeoman/generator-gulp-webapp">generator-gulp-webapp</a>
-
-      section.gif.gif--gulp-is-awesome
-        h1.bullet THE YEOMAN TEAM AGREES
-        h2.bullet Gulp is awesome.
-        h3.bullet (I agree too)
-
-      section.gif.gif--future
-        h1.bullet THE FUTURE
-        ul
-          li <a href="https://github.com/node-task/spec/wiki">node-task</a> spec for standardised build tasks (Grunt is on board)
-          li <a href="https://github.com/gruntjs/grunt-next">Grunt 1.0 alpha</a> uses Orchestrator! (OMG)
-          li So what's the difference? <strong>Config vs code.</strong>
+        h2 Next Step is
+        h3 Schemaの変更管理/Migrationか
 
       section
         h1 Thank you!
+        img.avatar(src='images/profile.jpg')
         h3
-          a(href='https://twitter.com/markdalgleish') @markdalgleish
-        img.avatar.avatar--small(src='images/profile.jpg')
+          a(href='https://twitter.com/r_fujimoto') @r_fujimoto
 
     // build:js scripts/scripts.js
     script(src='bower_components/bespoke.js/dist/bespoke.min.js')
